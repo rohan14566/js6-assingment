@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+   <h4>Q.Count Characters</h4>
+   const countCharacters = (S) => 
+   {
+       let B=[0,0];
+       for(let i=0;i < S.length;i++){
+         
+         if(S.charAt(i)=="A")
+         {
+         B[0]+=1;
+         }
+       else if(S.charAt(i)=="D")
+         {
+         B[1]+=1;
+         }
+       }
+       
+       return B;  
+   };
+   <h4>Q.Count the Heads</h4>
+   var Count_Occ = (s) => 
+{
+ let count=1;
+    let str='';
+    let op="";
+    for(let i=0;i < s.length;i++){
+      for(j=i+1;j < s.length;j++){
+        if(s[i]==s[j]){
+          count++;
+        }
+      }
+      if(count>1){
+        str=s[i];
+        op=op+" "+s[i]+count;
+        s=s.replace(str,' ');
+        s=s.split(str).join('');
+      }
+      count=1;
+    }
+    return op.split(' ').sort().join('');
+
+};
+   <h4>Q.Count the Vowels</h4>
+   var Count_Vowels= (S) => 
+{
+ let str=S;
+ let counter = 0;
+ let vowels = ['a','e','i','o','u']
+ for(ch of str)
+ {
+   if(vowels.includes(ch))
+   {
+     counter++;
+   }
+ }
+ return counter;
+   
+};
+ <h4>Q.Concatenate the Strings</h4>
+   var Concatenate_Strings = (S1, S2) => 
+{
+ let S3 = S1.concat(S2);
+ return S3;
+};
+
+<h4>Q.Find Length </h4>   
+const findLength = (S) => 
+{
+  str = S;
+  return (str.length);
+};
+<h4>Q.Find the Winner</h4>
+var Game_Winner = (S) => 
+{
+  let countA = 0;
+  let countD = 0;
+  for(let value of S){
+    if(value === "A"){
+      countA++;
+    }else{
+      countD++;
+    }
+  }
+  if(countA === countD){
+    return "Draw";
+  }else if(countA > countD){
+    return "Aditya";
+  }else{
+    return "Danish";
+  } 
+};
+   <h4>Q.Join Strings</h4>
+   const joinStrings = (S, P) => 
+{
+  str = S;
+  str1 = P;
+  return (str.concat(str1));
+};
+ 
+   <h4>Q.Plaindrome Check</h4>
+   ar Palin_Check = (str) =>
+   {
+    let count = 0;
+        let len = str.length - 1;
+        for(let i = 0; i < str.length ; i++){
+            if(str[i] === str[len]){
+              count++;
+              len--;
+            }else{
+              return `False`;
+            }
+        }
+        if(count>0){return `True`;}	 
+   }
+<h4>Q. Reverse the String</h4>
+var Reverse_String = (str) => 
+{
+  let str1 = str;
+  let newstr1='';
+  for(let i=str1.length-1;i>0;i--)
+  {
+    newstr1+=str[i];
+  }
+  return newstr1;
+};
+   <h4>Q.Match the Strings</h4>
+   var String_Match = (S1,S2) => 
+{
+  let str = S1;  
+  let str1 = S2; 
+    if(str==str1)
+   {
+     return("YES")
+   }
+   else
+   {
+     return("NO")
+   }
+
+};
+   <h4>Q.String Replace</h4>
+var Replace = (S, pattern , text) => 
+{
+      let str = S;
+      let patt = pattern;
+      let txt = text;
+      let rep = str.replace(patt,txt);
+      return rep;
+};
+   <h4>Q.Split the String</h4>
+   
+var Split_the_string = (S) => 
+{
+  let str = S;
+  return str.split(" ")
+        
+};
+   <h4>Q.Count the Vowels and Consonants</h4>
+   var Count_Vowels= (S) => 
+{
+    let count = 0;
+   const vowel = "aeiouAEIOU";
+   for(let letters of S){
+      for(let vow of vowel){
+        if(letters === vow){
+          count++;
+        }
+      } 
+   }
+   return count;     
+};
+var Count_Consonants= (S) => 
+{
+  let count2 = 0;
+   const vowel2 = "aeiouAEIOU";
+   for(let letters of S){
+      for(let vow of vowel2){
+        if(letters === vow){
+          count2++;
+        }
+      }
+   }
+   return (S.length - count2);        
+};
+    </pre>
+</body>
+</html>
